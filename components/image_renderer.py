@@ -166,10 +166,10 @@ def wrap_text_preserve_tokens(text: str, width: int) -> str:
 
 def render_prompt_to_image(
     text: str,
-    font_size: int = 14,
-    padding: int = 20,
+    font_size: int = 28,
+    padding: int = 40,
     line_height: float = 1.5,
-    max_width: int = 1200,
+    max_width: int = 2400,
     wrap_width: int = 120,
 ) -> bytes:
     """

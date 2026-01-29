@@ -128,17 +128,25 @@ def render_edit_tab(display_prompt: str, generated_prompt: str):
     st.caption(
         "Edit the prompt directly. Changes here won't sync back to the message controls."
     )
+    # Use a dynamic key based on the generated prompt hash when not in edited mode
+    # This forces Streamlit to re-render the text area when the generated prompt changes
+    if st.session_state.use_edited_prompt:
+        editor_key = "prompt_editor_edited"
+    else:
+        editor_key = f"prompt_editor_{hash(generated_prompt)}"
+
     edited = st.text_area(
         "Edit Prompt",
         value=display_prompt,
         height=500,
-        key="prompt_editor",
+        key=editor_key,
         label_visibility="collapsed",
     )
 
     if edited != display_prompt:
         st.session_state.edited_prompt = edited
         st.session_state.use_edited_prompt = True
+        st.rerun()  # Force rerun to update preview tab
 
     # Reset button
     if st.session_state.use_edited_prompt:
