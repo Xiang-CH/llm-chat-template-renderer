@@ -1,4 +1,4 @@
-# Prompt Template Builder
+# LLM Chat Template Renderer
 
 A Streamlit web app for building and visualizing chat prompts for various LLMs. Convert chat messages into model-specific prompt formats with syntax highlighting.
 
