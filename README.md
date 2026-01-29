@@ -2,12 +2,14 @@
 
 A Streamlit web app for building and visualizing chat prompts for various LLMs. Convert chat messages into model-specific prompt formats with syntax highlighting.
 
+<img width="1463" height="993" alt="Screenshot 2026-01-29 at 3 28 49 PM" src="https://github.com/user-attachments/assets/f69f0797-e09f-463c-b665-e2bef42f8bf4" />
+
 ## Supported Models
 
-- **DeepSeek V3.1** - DeepSeek's chat format with special tokens
-- **Qwen3** - Qwen's im_start/im_end format
-- **GLM-4.5** - GLM's gMASK format
-- **MiniMax-M2** - MiniMax's custom format
+- **DeepSeek V3.1**
+- **Qwen3**
+- **GLM-4.5**
+- **MiniMax-M2**
 
 ## Features
 
